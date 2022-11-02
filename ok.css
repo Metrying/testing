@@ -132,7 +132,7 @@ nav .nav-list .nav-link {
     }
     .first{
         left: 7%;
-        position: relative;
+        position: fixed;
     }
     .big1{
         font-size: 8vh;
