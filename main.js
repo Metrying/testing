@@ -9,6 +9,7 @@ let hobbies = ["I love to talk with humans", "I like to make friends like you", 
 let pizzas = ["Which type of pizza do you like?", "I can make a pizza for you", "I would love to make a pizza for you", "Would you like cheese pizza?"];
 let thank = ["Most welcome","Not an issue","Its my pleasure","Mention not"];
 let closing = ['Ok bye-bye','As you wish, bye take-care','Bye-bye, see you soon..']
+let explain = ["You can play games and talk with me", "This website is awesome, have fun"]
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
@@ -72,6 +73,15 @@ function chatbotvoice(message){
         let finalresult = hobbies[Math.floor(Math.random() * hobbies.length)];
         speech.text = finalresult;
     }
+    if(message.includes('website')){
+        let finalresult = hobbies[Math.floor(Math.random() * hobbies.length)];
+        speech.text = finalresult;
+    }
+    if(message.includes('can I do here')){
+        let finalresult = hobbies[Math.floor(Math.random() * hobbies.length)];
+        speech.text = finalresult;
+    }
+
     window.speechSynthesis.speak(speech);
     chatareamain.appendChild(showchatbotmsg(speech.text));
 }
