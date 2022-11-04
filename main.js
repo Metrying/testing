@@ -74,11 +74,11 @@ function chatbotvoice(message){
         speech.text = finalresult;
     }
     if(message.includes('website')){
-        let finalresult = hobbies[Math.floor(Math.random() * hobbies.length)];
+        let finalresult = explain[Math.floor(Math.random() * hobbies.length)];
         speech.text = finalresult;
     }
     if(message.includes('can I do here')){
-        let finalresult = hobbies[Math.floor(Math.random() * hobbies.length)];
+        let finalresult = explain[Math.floor(Math.random() * hobbies.length)];
         speech.text = finalresult;
     }
 
