@@ -8,8 +8,8 @@ let greetings = ["I am good, you little piece of love", "I am fine, what about y
 let hobbies = ["I love to talk with humans", "I like to make friends like you", "I like cooking"];
 let pizzas = ["Which type of pizza do you like?", "I can make a pizza for you", "I would love to make a pizza for you", "Would you like cheese pizza?"];
 let thank = ["Most welcome","Not an issue","Its my pleasure","Mention not"];
-let closing = ['Ok bye-bye','As you wish, bye take-care','Bye-bye, see you soon..']
-let explain = ["You can play games and talk with me", "This website is awesome, have fun"]
+let closing = ['Ok bye-bye','As you wish, bye take-care','Bye-bye, see you soon..'];
+let explain = ["You can play games and talk with me", "This website is awesome, have fun"];
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
@@ -36,6 +36,9 @@ function chatbotvoice(message){
     }
     if(message.includes('talk')){
         speech.text = "Sure";
+    }
+    if(message.includes('bye')){
+        speech.text = "Goodbye, visit again";
     }
     if(message.includes('who are you')){
         let finalresult = intro[Math.floor(Math.random() * intro.length)];
